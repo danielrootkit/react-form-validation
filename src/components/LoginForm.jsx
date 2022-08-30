@@ -26,7 +26,7 @@ class LoginForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const errors = this.validateForm(this.state.account, this.schema);
-    this.setState({ errors });
+    this.setState({ errors: errors || {} });
   };
 
   handleChange = (e) => {
